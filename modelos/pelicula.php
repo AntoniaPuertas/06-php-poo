@@ -8,7 +8,7 @@ class Pelicula {
     private Director $director;
 
 
-    public function __construct(int $id, string $titulo, float $precio, Director $director)
+    public function __construct(int $id, string $titulo, float $precio, Director $director = null)
     {
         $this->id = $id;
         $this->titulo = $titulo;
@@ -17,8 +17,9 @@ class Pelicula {
         }else{
             $this->precio = 1;
         }
-        
-        $this->director = $director;
+        if($director != null){
+            $this->director = $director;
+        }
     }
 
     public function getId(): int{
@@ -67,13 +68,16 @@ class Pelicula {
     }
     
     public function toString() : string{
-        return "Película: " . 
+        $resultado = "Película: " . 
         $this->titulo . 
         " Precio: " . 
         $this->precio . 
-        "<br>" . 
-        $this->director->toString() . 
         "<br>";
+        if(isset($this->director)){
+            $resultado .= $this->director->toString();
+        } 
+        $resultado .= "<br>";
+        return $resultado;
     }
 
 }
