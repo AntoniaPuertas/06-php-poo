@@ -1,11 +1,12 @@
 <?php 
 declare(strict_types=1);
 
-require_once 'modelos/perro.php';
-require_once 'modelos/gato.php';
-require_once 'modelos/cuadrado.php';
-require_once 'modelos/circulo.php';
-require_once 'modelos/plan.php';
+require 'modelos/autoload.php';
+// require_once 'modelos/perro.php';
+// require_once 'modelos/gato.php';
+// require_once 'modelos/cuadrado.php';
+// require_once 'modelos/circulo.php';
+// require_once 'modelos/plan.php';
 
 
 $miPerro = new Perro('Tula', 14, 'Cunera');
