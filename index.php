@@ -34,4 +34,3 @@ echo $persona->saludar();
 
 $miCoche = new Coche('Ferrari', 'SF1', 'Rojo', 2023);
 echo $miCoche->obtenerInformacion();
-
